@@ -1,13 +1,13 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import image1 from "../assets/heroimg.jpg";
-import image2 from "../assets/DownButton.png";
-import image3 from "../assets/tiger.jpg";
-import image4 from "../assets/deer.jpg";
-import image5 from "../assets/eagle.jpg";
-import image6 from "../assets/wolf.jpg";
-import image7 from "../assets/fish.jpg";
-import image8 from "../assets/parrot.jpg";
+import image1 from "./assets/heroimg.jpg";
+import image2 from "./assets/DownButton.png";
+import image3 from "./assets/tiger.jpg";
+import image4 from "./assets/deer.jpg";
+import image5 from "./assets/eagle.jpg";
+import image6 from "./assets/wolf.jpg";
+import image7 from "./assets/fish.jpg";
+import image8 from "./assets/parrot.jpg";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
