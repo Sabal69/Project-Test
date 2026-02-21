@@ -18,7 +18,7 @@ function App() {
       {/* Existing Hero Section */}
       <div className="hero">
         <img 
-          src="/src/assets/heroimg.jpg"
+          src="src/assets/heroimg.jpg"
           alt="Hero Background" 
           className="hero-bg-image"
           style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -50,7 +50,7 @@ function App() {
         </div>
 
         <div className="scroll-icon">
-          <img src="/src/assets/DownButton.png" alt="Scroll Down" />
+          <img src="src/assets/DownButton.png" alt="Scroll Down" />
         </div>
       </div>
 
@@ -58,16 +58,16 @@ function App() {
       <section className="captures-section">
         <div className="gallery-grid">
           <div className="column">
-            <img src="/src/assets/tiger.jpg" alt="Tiger" className="img-small" />
-            <img src="/src/assets/deer.jpg" alt="Deer" className="img-large" />
+            <img src="src/assets/tiger.jpg" alt="Tiger" className="img-small" />
+            <img src="src/assets/deer.jpg" alt="Deer" className="img-large" />
           </div>
           <div className="column">
-            <img src="/src/assets/eagle.jpg" alt="Eagle" className="img-main" />
+            <img src="src/assets/eagle.jpg" alt="Eagle" className="img-main" />
           </div>
           <div className="column">
-            <img src="/src/assets/wolf.jpg" alt="Wolf" className="img-mid" />
-            <img src="/src/assets/fish.jpg" alt="Fish" className="img-tiny" />
-            <img src="/src/assets/parrot.jpg" alt="Parrot" className="img-medium" />
+            <img src="src/assets/wolf.jpg" alt="Wolf" className="img-mid" />
+            <img src="src/assets/fish.jpg" alt="Fish" className="img-tiny" />
+            <img src="src/assets/parrot.jpg" alt="Parrot" className="img-medium" />
           </div>
         </div>
 
