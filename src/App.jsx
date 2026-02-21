@@ -32,6 +32,8 @@ function App() {
           style={{ transform: `translateY(${scrollY * 0.5}px)` }}
         />
 
+        <div className="gradient-overlay"></div>
+
         <nav className="navbar">
           <div className="logo">LOGO</div>
           <ul className="nav-links">

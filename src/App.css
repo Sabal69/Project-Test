@@ -51,6 +51,17 @@
   will-change: transform;
 }
 
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 250px;
+  background: linear-gradient(to bottom, transparent, #0A0E17);
+  z-index: 1;
+}
+
 
 
 /* ================= NAVBAR ================= */
@@ -212,7 +223,7 @@
 
 /* Container to hold sections */
 .container {
-  background-color: #0a0e12; /* Match the dark background */
+  background-color: #0A0E17;
   color: white;
   font-family: 'Inter', sans-serif;
 }
@@ -264,14 +275,16 @@
 /* Text Content Styling */
 .captures-content {
   flex: 1;
-  max-width: 450px;
+  max-width: 747px;
+  padding-left: 40PX;
 }
 
 .captures-title {
-  font-size: 3.5rem;
-  font-family: 'Serif', serif; /* Or a specific font like Playfair Display */
-  letter-spacing: 4px;
+  font-size: 96px;
+  font-family: 'Fragor - Demo Version', sans-serif;
+  letter-spacing: 6px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .short-line {
@@ -324,6 +337,41 @@
 
   .scroll-icon {
     right: 40px;
+  }
+
+  .captures-section {
+    flex-direction: column;
+    padding: 80px 40px;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .gallery-grid {
+    gap: 15px;
+  }
+
+  .column {
+    gap: 15px;
+  }
+
+  .img-small { height: 180px; width: 90px; }
+  .img-large { height: 240px; width: 160px; }
+  .img-main { height: 350px; width: 230px; margin-top: 20px; }
+  .img-mid { height: 120px; width: 100px; }
+  .img-tiny { height: 60px; width: 60px; }
+  .img-medium { height: 120px; width: 100px; }
+
+  .captures-content {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .captures-title {
+    font-size: 3rem;
+  }
+
+  .short-line {
+    margin: 0 auto 20px;
   }
 }
 
@@ -382,6 +430,44 @@
   .scroll-icon img {
     width: 24px;
   }
+
+  .captures-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .gallery-grid {
+    gap: 15px;
+  }
+
+  .column {
+    gap: 15px;
+  }
+
+  .img-small { height: 180px; width: 80px; }
+  .img-large { height: 250px; width: 160px; }
+  .img-main { height: 350px; width: 230px; margin-top: 20px; }
+  .img-mid { height: 120px; width: 100px; }
+  .img-tiny { height: 60px; width: 60px; }
+  .img-medium { height: 120px; width: 100px; }
+
+  .captures-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .captures-title {
+    font-size: 2.5rem;
+  }
+
+  .short-line {
+    margin: 0 auto 20px;
+  }
+
+  .captures-content p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Small Mobile */
@@ -431,5 +517,39 @@
 
   .scroll-icon img {
     width: 20px;
+  }
+
+  .captures-section {
+    padding: 40px 15px;
+    gap: 30px;
+  }
+
+  .gallery-grid {
+    gap: 10px;
+  }
+
+  .column {
+    gap: 10px;
+  }
+
+  .img-small { height: 140px; width: 60px; }
+  .img-large { height: 200px; width: 120px; }
+  .img-main { height: 280px; width: 180px; margin-top: 15px; }
+  .img-mid { height: 100px; width: 80px; }
+  .img-tiny { height: 50px; width: 50px; }
+  .img-medium { height: 100px; width: 80px; }
+
+  .captures-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .captures-content p {
+    font-size: 0.85rem;
+  }
+
+  .see-more-btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
