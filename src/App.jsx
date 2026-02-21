@@ -1,5 +1,13 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import image1 from "../assets/heroimg.jpg";
+import image2 from "../assets/DownButton.png";
+import image3 from "../assets/tiger.jpg";
+import image4 from "../assets/deer.jpg";
+import image5 from "../assets/eagle.jpg";
+import image6 from "../assets/wolf.jpg";
+import image7 from "../assets/fish.jpg";
+import image8 from "../assets/parrot.jpg";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -18,7 +26,7 @@ function App() {
       {/* Existing Hero Section */}
       <div className="hero">
         <img 
-          src="src/assets/heroimg.jpg"
+          src={image1}
           alt="Hero Background" 
           className="hero-bg-image"
           style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -50,7 +58,7 @@ function App() {
         </div>
 
         <div className="scroll-icon">
-          <img src="src/assets/DownButton.png" alt="Scroll Down" />
+          <img src={image2} alt="Scroll Down" />
         </div>
       </div>
 
@@ -58,16 +66,16 @@ function App() {
       <section className="captures-section">
         <div className="gallery-grid">
           <div className="column">
-            <img src="src/assets/tiger.jpg" alt="Tiger" className="img-small" />
-            <img src="src/assets/deer.jpg" alt="Deer" className="img-large" />
+            <img src={image3} alt="Tiger" className="img-small" />
+            <img src={image4} alt="Deer" className="img-large" />
           </div>
           <div className="column">
-            <img src="src/assets/eagle.jpg" alt="Eagle" className="img-main" />
+            <img src={image5} alt="Eagle" className="img-main" />
           </div>
           <div className="column">
-            <img src="src/assets/wolf.jpg" alt="Wolf" className="img-mid" />
-            <img src="src/assets/fish.jpg" alt="Fish" className="img-tiny" />
-            <img src="src/assets/parrot.jpg" alt="Parrot" className="img-medium" />
+            <img src={image6} alt="Wolf" className="img-mid" />
+            <img src={image7} alt="Fish" className="img-tiny" />
+            <img src={image8} alt="Parrot" className="img-medium" />
           </div>
         </div>
 
