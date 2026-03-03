@@ -11,6 +11,7 @@ import image8 from "./assets/parrot.jpg";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
+  const [trail, setTrail] = useState([]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,8 +22,33 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const newDot = {
+        x: e.clientX,
+        y: e.clientY,
+        id: Date.now(),
+      };
+      setTrail((prev) => [...prev, newDot].slice(-15));
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   return (
     <div className="container">
+      {trail.map((dot, index) => (
+        <div
+          key={dot.id}
+          className="cursor-trail"
+          style={{
+            left: dot.x,
+            top: dot.y,
+            opacity: index / trail.length,
+          }}
+        />
+      ))}
       {/* Existing Hero Section */}
       <div className="hero">
         <img 
@@ -66,7 +92,8 @@ function App() {
 
       {/* NEW: Captures Gallery Section */}
       <section className="captures-section">
-        <div className="gallery-grid">
+        <div className="gallery-grid-wrapper">
+          <div className="gallery-grid">
           <div className="column">
             <img src={image3} alt="Tiger" className="img-small" />
             <img src={image4} alt="Deer" className="img-large" />
@@ -79,6 +106,7 @@ function App() {
             <img src={image7} alt="Fish" className="img-tiny" />
             <img src={image8} alt="Parrot" className="img-medium" />
           </div>
+        </div>
         </div>
 
         <div className="captures-content">
