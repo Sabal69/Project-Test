@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +36,14 @@ function Home() {
 
         <nav className="navbar">
           <div className="logo">LOGO</div>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
+          <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+            <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
             <li>Locations</li>
             <li>About</li>
           </ul>

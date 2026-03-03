@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Gallery() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const photos = [
     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
     "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800",
@@ -26,9 +29,14 @@ function Gallery() {
     <div className="gallery-page">
       <nav className="navbar-gallery">
         <div className="logo">LOGO</div>
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/gallery">Gallery</Link></li>
+        <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li>Locations</li>
           <li>About</li>
         </ul>
