@@ -626,3 +626,152 @@
     font-size: 14px;
   }
 }
+
+
+/* ================= GALLERY PAGE ================= */
+
+.gallery-page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.navbar-gallery {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: #0A0E17;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-gallery .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.navbar-gallery .nav-links a:hover {
+  opacity: 0.7;
+}
+
+.navbar-gallery .logo {
+  color: white;
+}
+
+.navbar-gallery .nav-links {
+  color: white;
+}
+
+.navbar-gallery .nav-links li {
+  color: white;
+  position: relative;
+  transition: opacity 0.3s;
+}
+
+.navbar-gallery .nav-links li::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-gallery .nav-links li:hover::after {
+  width: 100%;
+}
+
+.navbar-gallery .nav-links li:hover {
+  opacity: 1;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.gallery-header {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-header h1 {
+  font-size: 96px;
+  font-family: 'Fragor - Demo Version', sans-serif;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.gallery-header p {
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 0 60px 60px;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .gallery-masonry {
+    column-count: 2;
+    padding: 0 40px 40px;
+  }
+
+  .gallery-header h1 {
+    font-size: 60px;
+  }
+
+  .navbar-gallery {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-masonry {
+    column-count: 1;
+    padding: 0 20px 40px;
+  }
+
+  .gallery-header h1 {
+    font-size: 40px;
+  }
+
+  .navbar-gallery {
+    padding: 20px;
+  }
+}
